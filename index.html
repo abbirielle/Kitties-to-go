@@ -16,7 +16,7 @@
             background-color: #3498db;
             color: white;
             text-align: center;
-            padding 20px;
+            padding: 20px;
         }
         
         header h1 {
@@ -62,7 +62,12 @@
             padding-right: 20px;
         }
         
-        .sidebar img {
+        .sidebar {
+            flex: 1;
+            padding-left: 20px;
+        }
+        
+       .sidebar img {
             width: 100%;
             border-radius: 5px;
             margin-top: 10px;
@@ -93,7 +98,6 @@
             
             .sidebar {
                 margin-top: 20px;
-                borderleft: none;
                 padding-left: 0;
             }
         }
@@ -101,12 +105,16 @@
 </head>
 <body>
     
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <header>
         <h1> Kitties To Go!</h1>
         <p>Seattles premier drive through cat rentals</p>
     </header>
     
-    <nav>
+    <!-- Improved Navigation for Screen Readers -->
+    <nav aria-label="Main navigation">
         <a href="#">About</a> /
         <a href="#">Rates</a> /
         <a href="#">Liability Release</a> /
@@ -115,7 +123,7 @@
     </nav>
     
     <div class="container">
-        <div class="main-content">
+        <div class="main-content" id="main-content">
             <h2>Cat IIpsum Dolar Sit Amet</h2>
             <p><strong>Find something else more interesting</strong>, so catty ipsum mesmerizing birds sleep on my humans head.</p>
             <p>Hide head under blanket so no one can see me cat ipsum dolor sit amet, and dinf something more interesting.</p>
@@ -124,17 +132,18 @@
             <p>Fall asleep on the washing machine snuggles up to shoulders or knees and purrs to sleep.</p>
             <p>eat prawns daintily with a claw, then lie back paws clean , and draw the blinds with a flip of carnation milk.</p>
         </div>
-        
-        <aside class="sidebar">
+       
+       <!-- Sidebar with aria-role for Assistive Technology -->
+        <aside class="sidebar" role="complementary">
             <h3>Cats in the News</h3>
             <p>Chew ipad power cord, why must they do that, grab pompom in mouth and put in water dish.</p.
             <a href="#">Find out more >></a>
         </aside>
-        </div>
+    </div>
     
     <footer>
-        <p> 2025 Kitties to go, LLC | Seattle, Wa</p>
-        </footer>
+        <p>&copy; 2025 Kitties to go, LLC | Seattle, Wa</p>
+    </footer>
     
 </body>
 </html>
